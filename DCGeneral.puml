@@ -1,0 +1,140 @@
+@startuml
+
+class Personnage {
+- nom:string
+- age:integer
+- experience:float
+- histoire:text
+- description:text
+}
+
+class Monstre {
+- nom:string
+- description:text
+- experience:float
+}
+
+class LieuType {
+- nom:string
+}
+
+class Lieu {
+- nom:string
+- description:text
+}
+
+class Race {
+- nom:string
+- description:text
+}
+
+class Niveau {
+- numero:integer
+- palier:float
+}
+
+class Caracteristique {
+- nom:string
+- unite:string
+}
+
+class TypeAttribut {
+- nom:string
+}
+
+class Attribut {
+- nom:string
+}
+
+class CaracteristiquePossede {
+- valeur:float
+}
+
+
+class StatistiquePossede {
+- valeur:integer
+- max:integer
+- bonus:integer
+}
+
+class CoutStatistique {
+- valeur:integer
+- info:string
+}
+
+class Statistique {
+- nom:string
+}
+
+class Competence {
+- nom:string
+- description:text
+}
+
+
+class Objet {
+- nom:string
+- valeur:float
+- poids:float
+- description:text
+- estUneMonnaie:boolean
+}
+
+class ObjetPossede {
+- nombre:float
+- estEquipe:boolean
+- info:string
+}
+
+class CoutObjet {
+- valeur:float
+- info:string
+}
+
+class Quete {
+- nom:string
+- description:text
+- experience:float
+}
+
+class Sort {
+- nom:string
+- description:text
+}
+
+StatistiquePossede "0..*" o-- "1..1" Statistique
+
+CaracteristiquePossede "0..*" o-- "1..1" Caracteristique
+
+ObjetPossede "0..*" o-- "1..1" Objet
+
+Attribut "0..*" o-- "1..1" TypeAttribut
+
+Personnage "0..*" o-- "1..1" Race
+Personnage "1..1" o-- "0..*" StatistiquePossede : statistiques
+Personnage "0..*" o-- "0..*" Lieu
+Personnage "0..*" o-- "0..*" Competence
+Personnage "1..1" o-- "0..*" ObjetPossede : objets
+Personnage "0..*" o-- "0..*" Attribut
+Personnage "1..1" o-- "0..*" CaracteristiquePossede : caracteristiques
+Personnage "0..*" o-- "0..1" Niveau
+Personnage "0..*" o-- "0..*" Sort
+
+Monstre "0..*" o-- "0..*" Lieu
+Monstre "0..*" o-- "1..1" Race
+
+Race "1..1" o-- "0..*" CaracteristiquePossede : caracteristiques
+Race "0..*" o-- "0..*" Attribut
+Race "0..*" o-- "0..*" Competence
+
+Lieu "0..*" o-- "1..1" LieuType
+Lieu "0..*" o-- "0..*" Lieu
+
+Quete "0..*" o-- "0..*" Personnage
+Quete "0..*" o-- "0..*" Lieu
+Quete "1..1" o-- "0..*" ObjetPossede : objets
+
+Sort "1..1" o-- "0..*" CoutStatistique
+Sort "1..1" o-- "0..*" CoutObjet
+
+@enduml
