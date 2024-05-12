@@ -1,0 +1,57 @@
+.muc-logo{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    background: transparent;
+}
+
+.muc-logo.logo-xl{
+    height: 100px!important;
+    position: absolute!important;
+}
+
+.muc-logo.logo-xs{
+    height: 50px!important;
+    position: absolute!important;
+    /*left: -5px;*/
+}
+
+.dot{
+    height: 85px;
+    width: 83px;
+    background-color: transparent;
+    position: absolute;
+    border-radius: 45%;
+    transition: all ease-in 0.2s;
+}
+
+.dot:hover {
+    height: 83.5px;
+    background-color: rgba(255, 255, 255,0.4);
+    width: 82px;
+    top: 7.5px;
+    /*background-color: transparent;*/
+    border-radius: 50%;
+    position: absolute;
+    display: inline-block;
+    box-shadow: 0px 0px 20px 1px #fff;
+}
+
+#ErrorTrace.collapsed > svg {
+    transform: translate(0, 8%) rotate(-90deg)!important;
+}
+
+#ErrorTrace > svg {
+    transition: all ease-in 0.2s;
+    transform: translate(0, 8%)!important;
+}
+
+.logo-error{
+    width: 250px;
+    height: 250px;
+}
+
+.ball-shadow {
+    background: radial-gradient(50% 50%, #000 0%, #f4f6f9 100%);
+    height: 50px;
+    width: 250px;
+}

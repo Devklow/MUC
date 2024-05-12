@@ -1,0 +1,55 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+	<title>d20-svg</title>
+	<defs>
+		<image  width="409" height="465" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZkAAAHRAQMAAACCYFaMAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAApAAAexZMcwAAAAJ0Uk5TAP9bkSK1AAAFRUlEQVR4nO2cXXIUOwxG20BV8kZ2kN4J7AyyM7KT9A7IW1J1YRi3rbasH1tquPMkFUUmPXOqOJY8VTzoS4tWX57Vt5L6xu/nr27o7u393g09vlw+uKFv35en704o/V6WbXVCd2/Lokpp0OPLsqhSGnRVWlQpBcpKupQCZSVdSoGyki6lQLuS/o+XH1/KD2X8ZOjjf+Xn64MD+vyz/Pz1yQF9+TF8W356gReylAiBkiYlQqCkSYnQoaS8Lz68tJeilAQ1JWVmJagpKTMrQUhJnlkJuuBfpIsoQOUCQm2rCSoXEEqSEqByAaGk9gpQvYCDT/BHvZLYXg71SuLMcqhXEqU4RJREA/bkQh9wKQbhaS3FpRiEp7UUl2IQntZSfGYZxJSEmaUQVxJmlkJcSZhZCnElQYpCghKXIpCkxKUIJClxKQJJSry9BBKV2Kf6X+kFhCIz20P0AkKRme0hWYlJ9RC7gPLHut80JSrVQZoSleog+p3SqpfqIFWJauDXqhKRwpCuRKQwpCuRmcXQQIl4oJcDpf4iIki+gFDbKkIjpV4KQUOl7tulQWOlTqpBY6VOqkHyd0orJNUg7QJCIakGKd8prZrUAc2U8Mwe0EwJz+wBzZTwRTygqRL6LLyYKyEpgOZKSAqguRKSAsig1NpbIYtSa2+FRt8prUCqQuMLCAUzW6HxBYQCqQLNLiBUlSqQTem4iAWyKR1SBbIpHVI7ZFUCqR2yKsHM7pBVCdq7Q5ZpLVVmdocs01orwV+2aS21S2XIcgGhdqkM2ZWqVIYcSgVIPqXS3uRTKjObfEplZpNTaZ/Z5JjWUlep5JjWUtt6hXxKu1QyX0Coq1TyKmWp5FXKM5t8rc31+pDstxbq/T55Dy8P+q2gy4fkbdONId/FCCiggAIKKKCAAgoooIACCiiggAIKKKCAAgoooIACCiiggAIKKKCAAgoooID+P2hJAQUUUEABBRRQQAEFFJBSTwHdGrpZc2/6P7VTqxendlD8ezXv9yc2eF4fTuwKPX/1byXlPSvHtl6pvMrkXB6rS1O+NbW6nuXcHssre8m+IFkr7X98J5E39pJnQzJX3g10L+zlLUT3amDd8nOtt+3rot51x30xNUOek9jWCnkG/djG9LT32Pt0tBdtmNql0C6rvb1oa9beXrSfa24v3gQ+t3NsPYm6su3bo64b766Nbfh0/WE7CVh4r5Bt0MkWuq2929pBtpMgS/Kmk6Dr+Kb2HrkOAFnayyIGLFIszOBUbMK5gIZ5e1u+xQHNT2JbGTQ/CSHeYtpeMUhj1l6UGGPP+UAxLvZEERQYgwJPJu0Vs0sm7ZVTUs7lsYzbu60iNG4vDs752zSb4Ul0YUAYGrVXTegZtVfNAhq1twu96iBdqo/XMoYi9ZlXxvilbVWhU0FP+kkMIqXOhVdp7R3GZGknsa0DSDsJkmdGksDkQafJaQSS2ztJJpOlaMSdKW2Nhun9i1y3cwlyp7LqpJPY1gkktZeFClJIai/7DHvA22vIFOQnYUgv5O3d1inE28uzMzlET0JI6eQQPQkhOpNDp6IpT4Vg0pMQPiE86gfdGOzZt1dKiBWgvr3baoL6kzDGonbtNQew4vaK+bUShNsrJuVKED4Jc3wtbq/4vviwtVcOTxah1l45plmE2klsqxlq7XVkE7f2ym/LT6G9rrxlOAlXsjO0d1sdELRXieBWoNJeZy52kXImcJf2KuegQaW9WpS7ApX2am9qz3N7ldbqUD4Jd7x6bu+2OqHcXndk/LW9J8LpH19OxODfvWmtHUCnUvqXb0/qW38APUNOfxIiEnsAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 71px;fill: #000000;font-weight: 400;font-family: "NeoRetroShadow", "NeoRetroShadow" } 
+		.s1 { fill: #000000 } 
+	</style>
+	<use id="Calque 1" href="#img1" x="45" y="17"/>
+	<text id="13" style="transform: matrix(-1,0,0,-1,288.964,347.659)" >
+		<tspan x="0" y="0" class="t0">1</tspan><tspan  y="0" class="t0">3
+</tspan>
+	</text>
+	<text id="7" style="transform: matrix(.5,-0.866,.866,.5,154.256,217.383)" >
+		<tspan x="0" y="0" class="t0">7
+</tspan>
+	</text>
+	<text id="15" style="transform: matrix(-0.226,-0.577,.577,-0.226,107.477,288.37)" >
+		<tspan x="0" y="0" class="t0">1</tspan><tspan  y="0" class="t0">5
+</tspan>
+	</text>
+	<text id="9." style="transform: matrix(-0.149,.602,-0.602,-0.149,412.661,246.422)" >
+		<tspan x="0" y="0" class="t0">9</tspan><tspan  y="0" class="t0">.
+</tspan>
+	</text>
+	<text id="17" style="transform: matrix(.827,.111,-0.111,.827,148.72,107.189)" >
+		<tspan x="0" y="0" class="t0">1</tspan><tspan  y="0" class="t0">7
+</tspan>
+	</text>
+	<text id="3" style="transform: matrix(.792,-0.263,.263,.792,298.761,118.521)" >
+		<tspan x="0" y="0" class="t0">3
+</tspan>
+	</text>
+	<text id="19" style="transform: matrix(.479,.878,-0.878,.479,308.303,157.394)" >
+		<tspan x="0" y="0" class="t0">1</tspan><tspan  y="0" class="t0">9
+</tspan>
+	</text>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s1" d="m250.1 17c1.4 0 11.3 4.6 22 10.3 10.7 5.7 25.3 13.4 32.4 17.2 12.1 6.3 15.8 8.3 34.8 18.4 3.9 2.1 12.2 6.4 18.2 9.6 10.7 5.6 22.7 11.9 37 19.5 3.9 2.1 12.2 6.4 18.5 9.7 6.3 3.3 13.3 7 15.5 8.2 2.2 1.2 8 4.3 13 6.9 6.6 3.5 9.1 5.3 9.6 7.2 0.4 1.4 0.7 53.7 0.8 116.2 0.1 74.6 0.4 113.9 1.1 114.3 1.3 0.8 1.3 5.2 0 6-0.6 0.3-1 1.9-1 3.4 0 2.2-0.9 3.4-3.7 5.2-6.1 4-7.6 4.9-10.8 6.5-1.6 0.9-5.2 2.9-8 4.5-2.7 1.6-6.3 3.6-8 4.5-1.6 0.8-4.7 2.5-6.7 3.7-2 1.2-36.7 21-77 44.1-40.3 23-76.1 43.6-79.6 45.7-7.3 4.5-8.8 4.7-13.9 1.8-31.8-17.9-194.6-111.1-196.8-112.7l-2.4-1.7-0.1-117.8c0-66.1 0.4-118.5 0.9-119.5 0.5-0.9 1.3-3 1.7-4.5 1-3.2-2.3-1.3 49.4-28.2 16.8-8.7 39.3-20.4 50-26 10.7-5.6 26.7-13.9 35.5-18.5 15.1-7.8 27-14 53.5-27.9 6.3-3.3 12.7-6.1 14.1-6.1zm-2.3 5c-0.7 0-6.7 2.9-13.3 6.4-10 5.2-53.8 28-126.5 65.9-7.4 3.8-17.5 9.1-22.5 11.7-4.9 2.6-14.5 7.6-21.2 11.1-6.8 3.4-12.1 6.5-11.9 6.7 0.7 0.6 194.9 0.2 195.6-0.4 0.3-0.3 0.6-23.3 0.8-51 0.3-41.3 0.1-50.4-1-50.4zm5.5 0c-0.2 0-0.3 22.9-0.3 50.9v50.9l94.8 0.4c52.1 0.2 95.3 0.1 96.1-0.3 1.4-0.6-1.7-2.4-47.4-26.4-6-3.2-17.5-9.3-25.5-13.5-8-4.2-20.3-10.8-27.5-14.5-7.1-3.7-19.1-10-26.5-14-7.4-4-20.2-10.7-28.5-15-8.2-4.3-19.5-10.3-24.9-13.2-5.5-2.9-10.1-5.3-10.3-5.3zm-102.8 106c-57.3 0-94.5 0.4-94.5 0.9 0 1 6 14 32.8 71.1 6.8 14.5 27.8 59.7 33.2 71.5 1.5 3.3 4.7 10 7 15 9.2 19.6 12.7 27.1 14 30.3 0.7 1.8 1.7 3.1 2.3 2.9 0.8-0.2 24.2-45 80.1-153.2 6-11.6 12.8-24.6 15.2-29.1 2.4-4.5 4.4-8.4 4.4-8.8 0-0.3-42.5-0.6-94.5-0.6zm198.4 0h-93l0.6 2.2c0.4 1.3 1.5 3.6 2.5 5.3 0.9 1.6 5.9 11.1 11 21 5.1 9.9 15.1 29.2 22.3 43 7.1 13.7 16.2 31.3 20.2 39 4 7.7 11.1 21.4 15.8 30.5 4.7 9.1 12.2 23.5 16.6 32 4.4 8.5 8.4 15.6 8.9 15.8 0.5 0.1 2.2-2.6 3.7-6 3-6.8 4.6-10.2 21-45.3 5.9-12.7 12.1-25.9 13.7-29.5 8.6-18.4 15.7-33.6 22-47 2.8-5.8 5.8-12.3 6.8-14.5 0.9-2.2 6.1-13.3 11.4-24.7 5.3-11.3 9.6-20.9 9.6-21.2 0-0.3-41.9-0.6-93.1-0.6zm99.2 115.5l-0.6-116-3.6 7.5c-2 4.1-8.1 17.2-13.6 29-5.6 11.8-11.9 25.3-14.1 30-2.1 4.7-5.4 11.6-7.2 15.5-1.8 3.8-4.8 10.4-6.7 14.5-2 4.1-4.8 10.2-6.3 13.5-1.5 3.3-4.6 9.8-6.8 14.5-2.2 4.7-8.8 18.8-14.7 31.5-5.9 12.6-12.4 26.6-14.5 31-2.1 4.4-3.4 8.4-3 8.8 0.7 0.8 23.7 10.4 41.5 17.3 5 1.9 10.4 4.1 12 4.8 1.7 0.8 6.8 2.8 11.5 4.6 4.7 1.7 12.5 4.8 17.4 6.7 4.8 1.9 8.9 3.3 9.1 3.1 0.1-0.2-0.1-52.5-0.4-116.3zm-397.5-114.5c-0.3 0-0.6 51.5-0.6 114.5 0 72.7 0.4 114.5 1 114.5 0.9 0 9.6-3.2 13.5-5 1.1-0.5 7-2.7 13-4.9 6.1-2.2 15.7-5.9 21.5-8.2 5.8-2.2 13.4-5.1 17-6.3 3.6-1.3 8.8-3.2 11.5-4.4 2.8-1.1 7.1-2.8 9.7-3.7l4.6-1.7-2.7-6.2c-1.6-3.3-4.3-9.3-6.1-13.1-1.8-3.9-4.8-10.4-6.7-14.5-1.9-4.1-11.1-23.7-20.3-43.5-20.3-43.5-22.9-49-27-58-1.8-3.9-5.3-11.3-7.7-16.5-2.5-5.2-5.7-12-7-15-1.4-3-5-10.6-7.9-16.8-2.9-6.1-5.5-11.2-5.8-11.2zm199.8 0.3c-0.5-0.2-3.8 5.2-7.3 11.9-3.5 6.8-8.5 16.3-11.1 21.3-2.6 4.9-9.6 18.4-15.5 30-5.9 11.5-12 23.2-13.5 26-1.5 2.7-7.4 14-13 25-5.7 11-12.2 23.6-14.5 28-9.7 18.4-26.5 51.3-26.5 51.9 0 0.3 45.7 0.6 101.6 0.6 55.9 0 101.4-0.3 101.2-0.8-0.9-1.9-11.5-22.5-14.8-28.7-2-3.9-7.9-15.1-13-25-5.1-9.9-11.6-22.5-14.5-28-2.9-5.5-8.7-16.8-13-25-4.3-8.3-10.6-20.4-14-27-3.4-6.6-10.8-20.8-16.3-31.5-5.6-10.7-11.1-21.5-12.4-23.9-1.3-2.5-2.8-4.6-3.4-4.8zm-106.2 198.3c-0.4-0.2-4.7 1.2-9.7 3.1-4.9 1.9-13 4.9-18 6.8-4.9 1.9-14.4 5.5-21 8-6.6 2.5-16 6.1-21 8-18.3 6.9-24.7 9.4-25.2 9.9-0.3 0.2 2.4 2.1 5.9 4.1 3.4 1.9 47.9 27.3 98.8 56.4 50.9 29.1 92.6 52.5 92.8 52 0.2-0.4-4.1-7.1-9.5-14.8-5.4-7.7-14.4-20.7-20-28.8-11-15.9-41.8-60.2-60.8-87.5-6.4-9.2-11.9-16.9-12.3-17.2zm104.8 0.4c-53.9 0-98 0.4-98 0.9 0 0.4 4 6.6 8.9 13.7 23.9 34.5 34.5 49.8 45.1 64.9 6.3 9 16.2 23.3 22 31.6 19.8 28.7 21 30.4 22 30.4 0.5 0 7.7-9.7 15.9-21.5 23.5-33.8 28.2-40.6 34.1-49 3-4.4 9.8-14.1 15-21.6 5.2-7.6 13.3-19.2 17.9-25.8 14.4-20.8 15.1-21.8 15.1-22.7 0-0.5-41.6-0.9-98-0.9zm105.8 0.6c-1.3-0.6-3.2 1.5-8.8 9.6-3.9 5.7-12.4 17.9-18.8 27.1-6.4 9.2-14.3 20.5-17.4 25-3.1 4.5-7.1 10.2-8.8 12.7-12.2 17.4-42.8 61.4-45.6 65.6-3.4 5.1-4.2 7.4-2.5 7.4 0.9 0 193.1-109.6 194.4-110.9 0.5-0.5-3.6-2.6-9-4.6-5.4-2.1-13.8-5.4-18.8-7.3-4.9-1.9-16.2-6.1-25-9.5-8.8-3.3-20.9-7.9-27-10.2-6-2.3-11.7-4.5-12.7-4.9z"/>
+		<text id="1" style="transform: matrix(1,0,0,1,228.036,275.341)" >
+			<tspan x="0" y="0" class="t0">1
+</tspan>
+		</text>
+		<text id="11" style="transform: matrix(-0.43,.713,-0.72,-0.426,353.663,350.779)" >
+			<tspan x="0" y="0" class="t0">1</tspan><tspan  y="0" class="t0">1
+</tspan>
+		</text>
+		<text id="5" style="transform: matrix(-0.499,-0.666,.665,-0.508,179.159,393.979)" >
+			<tspan x="0" y="0" class="t0">5
+</tspan>
+		</text>
+	</g>
+</svg>

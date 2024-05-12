@@ -2,18 +2,41 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <title>{{ app_title }} - {% block title %}{% endblock %}</title>
+        <link rel="icon" href="{{ asset('images/d20-white.svg') }}">
+        <link rel="stylesheet" href="{{ asset('asset/css/general.css') }}">
+        <link rel="stylesheet" href="{{ asset('library/Fontawesome/css/all.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('library/Bootstrap/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('library/AdminLTE/adminlte.min.css') }}">
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="layout-fixed sidebar-mini">
+    <div class="wrapper">
+        {% block full_body %}
+        {% block navbar %}
+            {{ include('fragments/main-header.html.twig') }}
+        {% endblock %}
+        {% block sidebar %}
+            {{ include('fragments/main-sidebar.html.twig') }}
+        {% endblock %}
+    <main class="content-wrapper">
+        <div class="container-fluid">
+            <div>
+                {% block body %}
+                {% endblock %}
+            </div>
+            <div class="d-flex mt-4"></div>
+        </div>
+    </main>{{ include('fragments/main-footer.html.twig') }}
+    </div>
+    {% endblock %}
+    <script type="text/javascript" src="{{ asset('library/jQuery/jquery-3.7.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('library/Fontawesome/js/all.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('library/Bootstrap/bootstrap.bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('library/AdminLTE/adminlte.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('asset/js/general.js') }}" defer="defer"></script>
+    {% block javascripts %}
+    {% endblock %}
     </body>
 </html>

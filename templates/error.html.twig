@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{%  block stylesheets %}
+{% endblock %}
+
+{% block title %}
+    Erreur
+{% endblock %}
+
+{% block body %}
+    <div>
+        <div class="d-flex flex-wrap justify-content-center">
+            <div style="width: 250px;">
+                <img src="{{ asset('images/d20-colored.png') }}" class="align-middle logo-error mt-5" alt="Logo-erreur"/>
+                <div class="ball-shadow"></div>
+            </div>
+            <div class="col-8">
+                <h1 class="align-middle mt-5">ECHEC CRITIQUE - Erreur {% if status_code is defined %}{{ status_code }}{% endif %}</h1>
+                <div class="alert alert-danger alert-dismissible w-100">
+                    <h3>Détails de l'erreur</h3>
+{#                    {% if exception.message is defined %}#}
+                        <div class="d-flex flex-wrap">
+                            <p class="text-bold mr-2">Message :</p>
+{#                            <p>{{ exception.message }}</p>#}
+                            <p>Message Exemple</p>
+                        </div>
+{#                    {% endif %}#}
+{#                    {% if exception.traceAsString is defined %}#}
+                        <div class="d-flex flex-wrap">
+                            <p class="text-bold mr-2 collapsed"
+                               data-toggle="collapse" href="#collapseTrace" role="button" aria-expanded="false"
+                               aria-controls="collapseTrace" id="ErrorTrace">Trace <i class="fas fa-circle-chevron-down"></i></p>
+{#                            <p class="collapse" id="collapseTrace">{{ exception.traceAsString }}</p>#}
+                            <p class="collapse" id="collapseTrace">Trace exemple</p>
+                        </div>
+{#                    {% endif %}#}
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a class="btn btn-outline-dark" href="{{ path('homepage') }}"><i class="fas fa-arrow-rotate-back mr-1"></i>Retour à l'application</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
