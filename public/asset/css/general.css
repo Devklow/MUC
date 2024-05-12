@@ -50,8 +50,12 @@
     height: 250px;
 }
 
-.ball-shadow {
+.dice-shadow {
     background: radial-gradient(50% 50%, #000 0%, #f4f6f9 100%);
     height: 50px;
     width: 250px;
+}
+
+.pointer{
+    cursor: pointer!important;
 }
