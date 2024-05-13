@@ -9,16 +9,24 @@ $('#DarkModeSwitchLabel').on('click',(e)=>{
     document.querySelector("#DarkModeSwitch").click();
 })
 
+function enableDarkMode() {
+    document.querySelector('body').classList.add('dark-mode')
+    document.querySelector('nav').classList.remove('navbar-white')
+    document.querySelector('nav').classList.remove('navbar-light')
+    document.querySelector('.btn-navbar').classList.add('btn-dark')
+    document.querySelector('.form-control-navbar').classList.add('navbar-dark')
+    setCookie("darkmode", "true", 365)
+}
+
 $('#DarkModeSwitch').on('change', ()=>{
     if($('#DarkModeSwitch').is(':checked')){
-        document.querySelector('body').classList.add('dark-mode')
-        document.querySelector('nav').classList.remove('navbar-white')
-        document.querySelector('nav').classList.remove('navbar-light')
-        setCookie("darkmode","true",365)
+        enableDarkMode();
     } else {
         document.querySelector('body').classList.remove('dark-mode')
         document.querySelector('nav').classList.add('navbar-white')
         document.querySelector('nav').classList.add('navbar-light')
+        document.querySelector('.btn-navbar').classList.remove('btn-dark')
+        document.querySelector('.form-control-navbar').classList.remove('navbar-dark')
         setCookie("darkmode","false",365)
         // sessionStorage.setItem("darkmode",false);
     }
@@ -29,7 +37,8 @@ window. addEventListener('load',() =>{
     // console.log(document.cookie)
 
     if(getCookie("darkmode") === "true" && document.querySelector("#DarkModeSwitch")){
-        document.querySelector("#DarkModeSwitch").click();
+        enableDarkMode();
+        document.querySelector("#DarkModeSwitch").checked = true;
     }
 });
 
@@ -37,11 +46,11 @@ $(document).on('click', '#helpDropdown .dropdown-menu', function (e) {
     e.stopPropagation();
 });
 
-function setCookie(name, value, exp) {
+function setCookie(name, value, day) {
     const d = new Date();
-    d.setTime(d.getTime() + (exp*24*60*60*1000));
+    d.setTime(d.getTime() + (day*24*60*60));
     let expires = "expires="+ d.toUTCString();
-    document.cookie = name + "=" + value + ";" + exp + ";path=/";
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
 function getCookie(cname) {
