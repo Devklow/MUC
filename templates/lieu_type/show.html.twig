@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LieuType{% endblock %}
+
+{% block body %}
+<div class="card elevation-2">
+    <div class="card-header">
+        <h6 class="card-title">Visualisation d'un(e) LieuType</h6>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+                            <dt class="col-sm-6 text-right">Id :</dt>
+                <dd class="col-sm-6 text-secondary">{{ lieu_type.id }}</dd>
+                            <dt class="col-sm-6 text-right">Nom :</dt>
+                <dd class="col-sm-6 text-secondary">{{ lieu_type.nom }}</dd>
+                    </dl>
+    </div>
+    <div class="card-footer text-center d-flex justify-content-center">
+        <a class="btn btn-outline-secondary mr-2" href="{{ path('lieu_type_liste') }}">Retour</a>
+        <a class="btn btn-outline-warning mr-2" href="{{ path('lieu_type_modifier', {'id': lieu_type.id}) }}">Modifier</a>
+        {{ include('lieu_type/_delete_form.html.twig') }}
+    </div>
+
+{% endblock %}

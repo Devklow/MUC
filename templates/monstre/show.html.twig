@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Monstre{% endblock %}
+
+{% block body %}
+<div class="card elevation-2">
+    <div class="card-header">
+        <h6 class="card-title">Visualisation d'un(e) Monstre</h6>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+                            <dt class="col-sm-6 text-right">Id :</dt>
+                <dd class="col-sm-6 text-secondary">{{ monstre.id }}</dd>
+                            <dt class="col-sm-6 text-right">Nom :</dt>
+                <dd class="col-sm-6 text-secondary">{{ monstre.nom }}</dd>
+                            <dt class="col-sm-6 text-right">Description :</dt>
+                <dd class="col-sm-6 text-secondary">{{ monstre.description }}</dd>
+                            <dt class="col-sm-6 text-right">Experience :</dt>
+                <dd class="col-sm-6 text-secondary">{{ monstre.experience }}</dd>
+                    </dl>
+    </div>
+    <div class="card-footer text-center d-flex justify-content-center">
+        <a class="btn btn-outline-secondary mr-2" href="{{ path('monstre_liste') }}">Retour</a>
+        <a class="btn btn-outline-warning mr-2" href="{{ path('monstre_modifier', {'id': monstre.id}) }}">Modifier</a>
+        {{ include('monstre/_delete_form.html.twig') }}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Sort{% endblock %}
+{% block body %}
+<div class="card elevation-2">
+    <div class="card-header">
+        <h6 class="card-title">Création d'un(e) Sort</h6>
+    </div>
+    {{ form_start(form) }}
+    {{ include('sort/_form.html.twig') }}
+    <div class="card-footer text-center">
+        <a class="btn btn-outline-secondary" href="{{ path('sort_liste') }}">Retour</a>
+        <button class="btn btn-outline-primary">{{ button_label|default('Enregistrer') }}</button>
+    </div>
+    {{ form_end(form) }}
+</div>
+{% endblock %}

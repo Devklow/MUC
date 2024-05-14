@@ -7,18 +7,80 @@
 
 ] %}
 
-{% set creation_menu = [
+{% set configuration_menu = [
     {
-        'title': 'Personnages',
-        'route': 'homepage',
-        'icon': 'fas fa-users',
+        'title': 'Statistiques',
+        'route': 'statistique_liste',
+        'icon': 'fas fa-dice-d20',
     },
     {
         'title': 'Caractéristiques',
         'route': 'caracteristique_liste',
         'icon': 'fas fa-list',
     },
+    {
+        'title': 'Competences',
+        'route': 'competence_liste',
+        'icon': 'fas fa-dumbbell',
+    },
+    {
+        'title': 'Niveaux',
+        'route': 'niveau_liste',
+        'icon': 'fas fa-arrow-up-right-dots',
+    },
+    {
+        'title': 'Attributs',
+        'route': 'attribut_liste',
+        'icon': 'fas fa-id-badge',
+    },
+    {
+        'title': "Types d'Attributs",
+        'route': 'type_attribut_liste',
+        'icon': 'far fa-id-badge',
+    },
+    {
+        'title': "Types de lieus",
+        'route': 'lieu_type_liste',
+        'icon': 'far fa-map',
+    },
+] %}
 
+{% set creation_menu = [
+    {
+        'title': 'Personnages',
+        'route': 'personnage_liste',
+        'icon': 'fas fa-users',
+    },
+    {
+        'title': 'Sorts',
+        'route': 'sort_liste',
+        'icon': 'fas fa-book-open',
+    },
+    {
+        'title': 'Races',
+        'route': 'race_liste',
+        'icon': 'fas fa-dna',
+    },
+    {
+        'title': 'Monstres',
+        'route': 'monstre_liste',
+        'icon': 'fas fa-dragon',
+    },
+    {
+        'title': 'Lieux',
+        'route': 'lieu_liste',
+        'icon': 'fas fa-location-pin',
+    },
+    {
+        'title': 'Quêtes',
+        'route': 'quete_liste',
+        'icon': 'fas fa-scroll',
+    },
+    {
+        'title': 'Objets',
+        'route': 'objet_liste',
+        'icon': 'fas fa-ring',
+    },
 ] %}
 
 <!-- Main Sidebar Container -->
@@ -66,6 +128,17 @@
                         </a>
                     </li>
                 {% endfor %}
+                <li class="nav-header text-center">CONFIGURATION</li>
+                {% for item in configuration_menu %}
+                    <li class="nav-item">
+                        {% set active = (item.route == app.request.get('_route')) ? 'active' : '' %}
+                        <a href="{{ path(item.route) }}" class="nav-link {{ active }}">
+                            <i class="nav-icon {{ item.icon }}"></i>
+                            <p>{{ item.title }}</p>
+                        </a>
+                    </li>
+                {% endfor %}
+                <li class="nav-header text-center mb-5"></li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

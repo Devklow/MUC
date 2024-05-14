@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Niveau{% endblock %}
+
+{% block body %}
+<div class="card elevation-2">
+    <div class="card-header">
+        <h6 class="card-title">Visualisation d'un(e) Niveau</h6>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+                            <dt class="col-sm-6 text-right">Id :</dt>
+                <dd class="col-sm-6 text-secondary">{{ niveau.id }}</dd>
+                            <dt class="col-sm-6 text-right">Numero :</dt>
+                <dd class="col-sm-6 text-secondary">{{ niveau.numero }}</dd>
+                            <dt class="col-sm-6 text-right">Palier :</dt>
+                <dd class="col-sm-6 text-secondary">{{ niveau.palier }}</dd>
+                    </dl>
+    </div>
+    <div class="card-footer text-center d-flex justify-content-center">
+        <a class="btn btn-outline-secondary mr-2" href="{{ path('niveau_liste') }}">Retour</a>
+        <a class="btn btn-outline-warning mr-2" href="{{ path('niveau_modifier', {'id': niveau.id}) }}">Modifier</a>
+        {{ include('niveau/_delete_form.html.twig') }}
+    </div>
+
+{% endblock %}

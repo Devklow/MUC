@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quete{% endblock %}
+
+{% block body %}
+<div class="card elevation-2">
+    <div class="card-header">
+        <h6 class="card-title">Visualisation d'un(e) Quete</h6>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+                            <dt class="col-sm-6 text-right">Id :</dt>
+                <dd class="col-sm-6 text-secondary">{{ quete.id }}</dd>
+                            <dt class="col-sm-6 text-right">Nom :</dt>
+                <dd class="col-sm-6 text-secondary">{{ quete.nom }}</dd>
+                            <dt class="col-sm-6 text-right">Description :</dt>
+                <dd class="col-sm-6 text-secondary">{{ quete.description }}</dd>
+                            <dt class="col-sm-6 text-right">Experience :</dt>
+                <dd class="col-sm-6 text-secondary">{{ quete.experience }}</dd>
+                    </dl>
+    </div>
+    <div class="card-footer text-center d-flex justify-content-center">
+        <a class="btn btn-outline-secondary mr-2" href="{{ path('quete_liste') }}">Retour</a>
+        <a class="btn btn-outline-warning mr-2" href="{{ path('quete_modifier', {'id': quete.id}) }}">Modifier</a>
+        {{ include('quete/_delete_form.html.twig') }}
+    </div>
+
+{% endblock %}

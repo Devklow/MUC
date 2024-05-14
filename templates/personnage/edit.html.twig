@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Personnage{% endblock %}
+{% block body %}
+<div class="card elevation-2">
+    <div class="card-header">
+        <h6 class="card-title">Modification d'un(e) Personnage</h6>
+    </div>
+    {{ form_start(form) }}
+    {{ include('personnage/_form.html.twig') }}
+    <div class="card-footer text-center">
+        <a class="btn btn-outline-secondary" href="{{ path('personnage_liste') }}">Retour</a>
+        <button class="btn btn-outline-primary">{{ button_label|default('Enregistrer') }}</button>
+    </div>
+    {{ form_end(form) }}
+</div>
+
+{% endblock %}

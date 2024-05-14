@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Personnage{% endblock %}
+
+{% block body %}
+<div class="card elevation-2">
+    <div class="card-header">
+        <h6 class="card-title">Visualisation d'un(e) Personnage</h6>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+                            <dt class="col-sm-6 text-right">Id :</dt>
+                <dd class="col-sm-6 text-secondary">{{ personnage.id }}</dd>
+                            <dt class="col-sm-6 text-right">Nom :</dt>
+                <dd class="col-sm-6 text-secondary">{{ personnage.nom }}</dd>
+                            <dt class="col-sm-6 text-right">Age :</dt>
+                <dd class="col-sm-6 text-secondary">{{ personnage.age }}</dd>
+                            <dt class="col-sm-6 text-right">Experience :</dt>
+                <dd class="col-sm-6 text-secondary">{{ personnage.experience }}</dd>
+                            <dt class="col-sm-6 text-right">Histoire :</dt>
+                <dd class="col-sm-6 text-secondary">{{ personnage.histoire }}</dd>
+                            <dt class="col-sm-6 text-right">Description :</dt>
+                <dd class="col-sm-6 text-secondary">{{ personnage.description }}</dd>
+                    </dl>
+    </div>
+    <div class="card-footer text-center d-flex justify-content-center">
+        <a class="btn btn-outline-secondary mr-2" href="{{ path('personnage_liste') }}">Retour</a>
+        <a class="btn btn-outline-warning mr-2" href="{{ path('personnage_modifier', {'id': personnage.id}) }}">Modifier</a>
+        {{ include('personnage/_delete_form.html.twig') }}
+    </div>
+
+{% endblock %}

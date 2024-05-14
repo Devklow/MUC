@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Quete{% endblock %}
+{% block body %}
+<div class="card elevation-2">
+    <div class="card-header">
+        <h6 class="card-title">Création d'un(e) Quete</h6>
+    </div>
+    {{ form_start(form) }}
+    {{ include('quete/_form.html.twig') }}
+    <div class="card-footer text-center">
+        <a class="btn btn-outline-secondary" href="{{ path('quete_liste') }}">Retour</a>
+        <button class="btn btn-outline-primary">{{ button_label|default('Enregistrer') }}</button>
+    </div>
+    {{ form_end(form) }}
+</div>
+{% endblock %}
