@@ -2,8 +2,21 @@
 
 
 //@TODO Langue française JSON
-// $('.dataTable').DataTable();
 
+$('table.datatable').DataTable({
+    language: {
+        url: document.body.dataset.datatableLanguage,
+    },
+    layout: {
+        topStart: {
+            buttons: ['colvis','pageLength']
+        },
+        bottomStart: 'info',
+        bottomEnd: 'paging'
+    },
+    stateSave: true,
+    pagingType: 'simple_numbers'
+})
 $('#DarkModeSwitchLabel').on('click',(e)=>{
     e.preventDefault();
     document.querySelector("#DarkModeSwitch").click();
@@ -35,7 +48,10 @@ $('#DarkModeSwitch').on('change', ()=>{
 window. addEventListener('load',() =>{
     // console.log(sessionStorage.getItem("darkmode"))
     // console.log(document.cookie)
-
+    $('[data-toggle="tooltip"]').tooltip({
+            container: '.content-wrapper',
+        }
+    )
     if(getCookie("darkmode") === "true" && document.querySelector("#DarkModeSwitch")){
         enableDarkMode();
         document.querySelector("#DarkModeSwitch").checked = true;
@@ -67,4 +83,22 @@ function getCookie(cname) {
         }
     }
     return "";
+}
+
+/** Modal de confirmation **/
+
+let modal = $('.modal')
+if (modal.length>0){
+    let form = null;
+    modal.on('hide.bs.modal', ()=>{form = null})
+    $('form.form-modal').on('submit', (e)=>{
+        e.preventDefault();
+        form = e.target
+        modal.find('.modal-title').text(form.dataset.modalTitle)
+        modal.find('.modal-body').text(form.dataset.modalBody)
+        modal.modal('show');
+    })
+    modal.find('.btn-confirm').on('click', ()=>{
+        form.submit();
+    })
 }

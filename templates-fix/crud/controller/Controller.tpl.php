@@ -8,12 +8,12 @@ namespace <?= $namespace ?>;
 #[Route('<?= $route_path ?>')]
 <?php } else { ?>
 /**
- * @Route("<?= $route_path ?>")
+ * @Route("<?= $route_path ?>", name="<?= substr($route_name,4) ?>_")
  */
 <?php } ?>
 class <?= $class_name ?> extends AbstractController
 {
-<?= $generator->generateRouteForControllerMethod('/', sprintf('%s_index', $route_name), ['GET']) ?>
+<?= $generator->generateRouteForControllerMethod('/', sprintf('liste', $route_name), ['GET']) ?>
 <?php if (isset($repository_full_class_name)): ?>
     public function index(<?= $repository_class_name ?> $<?= $repository_var ?>): Response
     {
@@ -34,7 +34,7 @@ class <?= $class_name ?> extends AbstractController
     }
 <?php endif ?>
 
-<?= $generator->generateRouteForControllerMethod('/new', sprintf('%s_new', $route_name), ['GET', 'POST']) ?>
+<?= $generator->generateRouteForControllerMethod('/nouveau', sprintf('nouveau', $route_name), ['GET', 'POST']) ?>
 <?php if (isset($repository_full_class_name) && $generator->repositoryHasAddRemoveMethods($repository_full_class_name)) { ?>
     public function new(Request $request, <?= $repository_class_name ?> $<?= $repository_var ?>): Response
 <?php } else { ?>
@@ -49,14 +49,14 @@ class <?= $class_name ?> extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $<?= $repository_var ?>->add($<?= $entity_var_singular ?>, true);
 
-            return $this->redirectToRoute('<?= $route_name ?>_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('<?= str_replace("app_","",$route_name) ?>_liste', [], Response::HTTP_SEE_OTHER);
         }
 <?php } else { ?>
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($<?= $entity_var_singular ?>);
             $entityManager->flush();
 
-            return $this->redirectToRoute('<?= $route_name ?>_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('<?= str_replace("app_","",$route_name) ?>_liste', [], Response::HTTP_SEE_OTHER);
         }
 <?php } ?>
 
@@ -73,7 +73,7 @@ class <?= $class_name ?> extends AbstractController
 <?php } ?>
     }
 
-<?= $generator->generateRouteForControllerMethod(sprintf('/{%s}', $entity_identifier), sprintf('%s_show', $route_name), ['GET']) ?>
+<?= $generator->generateRouteForControllerMethod(sprintf('/visualiser/{%s}', $entity_identifier), sprintf('visualiser', $route_name), ['GET']) ?>
     public function show(<?= $entity_class_name ?> $<?= $entity_var_singular ?>): Response
     {
         return $this->render('<?= $templates_path ?>/show.html.twig', [
@@ -81,7 +81,7 @@ class <?= $class_name ?> extends AbstractController
         ]);
     }
 
-<?= $generator->generateRouteForControllerMethod(sprintf('/{%s}/edit', $entity_identifier), sprintf('%s_edit', $route_name), ['GET', 'POST']) ?>
+<?= $generator->generateRouteForControllerMethod(sprintf('/modifier/{%s}', $entity_identifier), sprintf('modifier', $route_name), ['GET', 'POST']) ?>
 <?php if (isset($repository_full_class_name) && $generator->repositoryHasAddRemoveMethods($repository_full_class_name)) { ?>
     public function edit(Request $request, <?= $entity_class_name ?> $<?= $entity_var_singular ?>, <?= $repository_class_name ?> $<?= $repository_var ?>): Response
 <?php } else { ?>
@@ -95,13 +95,13 @@ class <?= $class_name ?> extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $<?= $repository_var ?>->add($<?= $entity_var_singular ?>, true);
 
-            return $this->redirectToRoute('<?= $route_name ?>_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('<?= str_replace("app_","",$route_name) ?>_liste', [], Response::HTTP_SEE_OTHER);
         }
 <?php } else { ?>
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
-            return $this->redirectToRoute('<?= $route_name ?>_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('<?= str_replace("app_","",$route_name) ?>_liste', [], Response::HTTP_SEE_OTHER);
         }
 <?php } ?>
 
@@ -118,7 +118,7 @@ class <?= $class_name ?> extends AbstractController
 <?php } ?>
     }
 
-<?= $generator->generateRouteForControllerMethod(sprintf('/{%s}', $entity_identifier), sprintf('%s_delete', $route_name), ['POST']) ?>
+<?= $generator->generateRouteForControllerMethod(sprintf('/supprimer/{%s}', $entity_identifier), sprintf('supprimer', $route_name), ['POST']) ?>
 <?php if (isset($repository_full_class_name) && $generator->repositoryHasAddRemoveMethods($repository_full_class_name)) { ?>
     public function delete(Request $request, <?= $entity_class_name ?> $<?= $entity_var_singular ?>, <?= $repository_class_name ?> $<?= $repository_var ?>): Response
 <?php } else { ?>
@@ -136,6 +136,6 @@ class <?= $class_name ?> extends AbstractController
         }
 <?php } ?>
 
-        return $this->redirectToRoute('<?= $route_name ?>_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('<?= str_replace("app_","",$route_name) ?>_liste', [], Response::HTTP_SEE_OTHER);
     }
 }

@@ -1,13 +1,15 @@
-<?= $helper->getHeadPrintCode('Edit '.$entity_class_name) ?>
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Caracteristique{% endblock %}
 {% block body %}
 <div class="card elevation-2">
     <div class="card-header">
-        <h6 class="card-title">Modification d'un(e) <?= $entity_class_name ?></h6>
+        <h6 class="card-title">Modification d'un(e) Caracteristique</h6>
     </div>
     {{ form_start(form) }}
-    {{ include('<?= $templates_path ?>/_form.html.twig') }}
+    {{ include('caracteristique/_form.html.twig') }}
     <div class="card-footer text-center">
-        <a class="btn btn-outline-secondary" href="{{ path('<?= substr($route_name,4) ?>_liste') }}">Retour</a>
+        <a class="btn btn-outline-secondary" href="{{ path('caracteristique_liste') }}">Retour</a>
         <button class="btn btn-outline-primary">{{ button_label|default('Enregistrer') }}</button>
     </div>
     {{ form_end(form) }}

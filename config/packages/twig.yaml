@@ -4,6 +4,8 @@ twig:
         app_title: '%app.name%'
         app_subtitle: '%app.longName%'
         app_version: '%app.version%'
+
+    form_themes: ['bootstrap_4_layout.html.twig']
 when@test:
     twig:
         strict_variables: true

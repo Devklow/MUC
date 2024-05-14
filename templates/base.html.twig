@@ -11,9 +11,9 @@
         {% block stylesheets %}
         {% endblock %}
     </head>
-    <body class="layout-fixed sidebar-mini">
+    <body class="layout-fixed sidebar-mini" data-datatable-Language="{{ asset('library/DataTable/fr-FR.json') }}">
+    {% block full_body %}
     <div class="wrapper">
-        {% block full_body %}
         {% block navbar %}
             {{ include('fragments/main-header.html.twig') }}
         {% endblock %}
@@ -31,7 +31,8 @@
         </div>
     </main>{{ include('fragments/main-footer.html.twig') }}
     </div>
-    {% endblock %}
+
+    <script type="text/javascript" src="{{ asset('asset/js/config.js') }}"></script>
     <script type="text/javascript" src="{{ asset('library/jQuery/jquery-3.7.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('library/Fontawesome/js/all.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('library/Bootstrap/bootstrap.bundle.min.js') }}"></script>
@@ -40,4 +41,5 @@
     {% block javascripts %}
     {% endblock %}
     </body>
+    {% endblock %}
 </html>
