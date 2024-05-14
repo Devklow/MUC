@@ -56,4 +56,8 @@ class Attribut
 
         return $this;
     }
+
+    public function __toString(): string{
+        return $this->getTypeAttribut() . ": " . $this->getNom();
+    }
 }
