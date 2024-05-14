@@ -1,22 +1,5 @@
 /** @var $ = jQuery */
 
-
-//@TODO Langue française JSON
-
-$('table.datatable').DataTable({
-    language: {
-        url: document.body.dataset.datatableLanguage,
-    },
-    layout: {
-        topStart: {
-            buttons: ['colvis','pageLength']
-        },
-        bottomStart: 'info',
-        bottomEnd: 'paging'
-    },
-    stateSave: true,
-    pagingType: 'simple_numbers'
-})
 $('#DarkModeSwitchLabel').on('click',(e)=>{
     e.preventDefault();
     document.querySelector("#DarkModeSwitch").click();
@@ -52,6 +35,7 @@ window. addEventListener('load',() =>{
             container: '.content-wrapper',
         }
     )
+
     if(getCookie("darkmode") === "true" && document.querySelector("#DarkModeSwitch")){
         enableDarkMode();
         document.querySelector("#DarkModeSwitch").checked = true;

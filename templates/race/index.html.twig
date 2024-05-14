@@ -3,42 +3,35 @@
 {% block title %}Race index{% endblock %}
 
 {% block body %}
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <div class="row">
-            <div class="col-md-6 text-left"><h6 class="mt-2 font-weight-bold text-primary">Liste des Race</h6></div>
-            <div class="col-md-6 text-right">
-                <a class="btn btn-sm btn-outline-primary" href="{{ path('race_nouveau') }}">Créer un(e) Race</a>
+    <div class="d-flex flex-wrap">
+        {% for race in races %}
+            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                <div class="card card-widget widget-user">
+                    <div class="widget-user-header" style="background-color: {{ race.couleur != "" ? race.couleur : '#A4A4A4' }}">
+                        <h3 class="widget-user-username">{{ race.nom }}</h3>
+                        <h5 class="widget-user-desc limit-char">{{ race.description }}</h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row d-flex justify-content-center">
+                            <a class="btn btn-outline-primary mr-2" data-toggle="tooltip" title="Voir" href="{{ path('race_visualiser', {'id': race.id}) }}"><i class="fa fa-search"></i></a>
+                            <a class="btn btn-outline-warning mr-2" data-toggle="tooltip" title='Modifier' href="{{ path('race_modifier', {'id': race.id}) }}"><i class="fa fa-edit"></i></a>
+                            {{ include('race/_delete_form.html.twig', {liste:true}) }}
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
-    <div class="card-body">
-        <table class="table datatable table-bordered">
-            <thead>
-                <tr>
-                        <th class="text-center">Id</th>
-                        <th class="text-center">Nom</th>
-                        <th class="text-center">Description</th>
-                        <th class="text-center" data-orderable="false">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-            {% for race in races %}
-                <tr>
-                        <td class="text-center">{{ race.id }}</td>
-                        <td class="text-center">{{ race.nom }}</td>
-                        <td class="text-center">{{ race.description }}</td>
-                        <td class="text-center">
-                        <a href="{{ path('race_visualiser', {'id': race.id}) }}"><i class="fa fa-search text-primary" data-toggle="tooltip" title="Voir"></i></a>
-                        <a href="{{ path('race_modifier', {'id': race.id}) }}"><i class="fa fa-edit text-warning ml-2 mr-2" data-toggle="tooltip" title='Modifier'></i></a>
-                        {{ include('race/_delete_form.html.twig', {liste:true}) }}
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+
+    <div class="d-flex justify-content-end">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
     </div>
-</div>
 <div class="col-sm-12 text-center">
     <a class="btn btn-outline-primary" href="{{ path('race_nouveau') }}">Créer un(e) Race</a>
 </div>

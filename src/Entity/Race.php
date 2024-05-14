@@ -44,6 +44,11 @@ class Race
      */
     private $competences;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $couleur;
+
     public function __construct()
     {
         $this->caracteristiques = new ArrayCollection();
@@ -161,5 +166,17 @@ class Race
     public function __toString(): string
     {
         return $this->getNom();
+    }
+
+    public function getCouleur(): ?string
+    {
+        return $this->couleur;
+    }
+
+    public function setCouleur(string $couleur): self
+    {
+        $this->couleur = $couleur;
+
+        return $this;
     }
 }

@@ -26,6 +26,7 @@ class Lieu {
 class Race {
 - nom:string
 - description:text
+- couleur:text
 }
 
 class Niveau {
