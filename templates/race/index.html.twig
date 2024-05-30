@@ -2,48 +2,50 @@
 
 {% block title %}Race index{% endblock %}
 
-{% block body %}
-    <div class="d-flex justify-content-start mb-2">
-            <p>Affichage de </p>
-            <select class="custom-select custom-select-sm form-control form-control-sm col-1 mr-2 ml-2 cardtable-select" aria-label="selection">
-                <option value="3">3</option>
-                <option value="6">6</option>
-                <option value="9">9</option>
-                <option value="12" selected="selected">12</option>
-            </select>
-            <p>Éléments</p>
-    </div>
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('library/DataTable/datatables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset/css/cardtable.css') }}">
+{% endblock %}
 
+{% block body %}
     <div class="d-flex">
         <div class="d-flex flex-wrap cardtable mb-4 w-100">
-        {% for race in races %}
-            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 cardtable-item">
-                <div class="card card-widget widget-user">
-                    <div class="widget-user-header" style="background-color: {{ race.couleur != "" ? race.couleur : '#A4A4A4' }}">
-                        <h3 class="widget-user-username cardtable-filterable">{{ race.nom }}</h3>
-                        <h5 class="widget-user-desc limit-char cardtable-filterable">{{ race.description }}</h5>
-                    </div>
-                    <div class="card-footer">
-                        <div class="row d-flex justify-content-center">
+            <table class="table datatable table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-center" data-orderable="true">Nom</th>
+                    <th class="text-center" data-orderable="false">Description</th>
+                    <th class="text-center" data-orderable="false">Couleur</th>
+                    <th class="text-center" data-orderable="false">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for race in races %}
+                    <tr>
+                        <td class="text-center">{{ race.nom }}</td>
+                        <td class="text-center">{{ race.description }}</td>
+                        <td class="text-center">{{ race.couleur }}</td>
+                        <td class="text-center">
                             <a class="btn btn-outline-primary mr-2" data-toggle="tooltip" title="Voir" href="{{ path('race_visualiser', {'id': race.id}) }}"><i class="fa fa-search"></i></a>
                             <a class="btn btn-outline-warning mr-2" data-toggle="tooltip" title='Modifier' href="{{ path('race_modifier', {'id': race.id}) }}"><i class="fa fa-edit"></i></a>
                             {{ include('race/_delete_form.html.twig', {liste:true}) }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <div class="d-flex justify-content-end">
-        <ul class="pagination">
-            <li class="page-item previous-page"><a class="page-link" href="#">Précédent</a></li>
-            <li class="page-item page-number page-one"><a class="page-link" href="">1</a></li>
-            <li class="page-item page-number page-two"><a class="page-link" href="">2</a></li>
-            <li class="page-item page-number page-third"><a class="page-link" href="#">3</a></li>
-            <li class="page-item next-page"><a class="page-link" href="#">Suivant</a></li>
-        </ul>
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 card-model">
+        <div class="card card-widget widget-user">
+            <div class="widget-user-header card-color" style="background-color:#A4A4A4">
+                <h3 class="widget-user-username card-name">Nom</h3>
+                <h5 class="widget-user-desc limit-char card-desc">Description</h5>
+            </div>
+            <div class="card-footer card-action d-flex justify-content-center">
+            </div>
+        </div>
     </div>
 <div class="col-sm-12 text-center">
     <a class="btn btn-outline-primary" href="{{ path('race_nouveau') }}">Créer un(e) Race</a>
@@ -52,6 +54,6 @@
 {% endblock %}
 
 {% block javascripts %}
-{#{{ include('fragments/data-tables.html.twig') }}#}
+    <script type="text/javascript" src="{{ asset('library/DataTable/datatables.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('asset/js/cardtable.js') }}" defer="defer"></script>
 {% endblock %}

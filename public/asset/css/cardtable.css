@@ -1,0 +1,12 @@
+.card-model{
+    display: none;
+}
+
+.dt-container>.row>.col-12{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dt-container{
+    width: 100%;
+}
