@@ -12,6 +12,10 @@
     top: -1px!important;
 }
 
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+    background-color: #0069d9;
+}
+
 .select2-container {
     line-height: 2.3;
 }
