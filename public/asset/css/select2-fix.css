@@ -10,7 +10,20 @@
     color: #fff!important;
     left: -5px!important;
     top: -1px!important;
+    border: 0
 }
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove::after {
+    position: absolute;
+    background-color: #aaa;
+    content: "";
+    height: 76%;
+    top: 5px;
+    right: -2px;
+    width: 1px;
+    z-index: 100;
+}
+
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
     background-color: #0069d9;
