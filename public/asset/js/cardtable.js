@@ -18,6 +18,7 @@ function addCards(id){
         card.querySelector('.card-action').innerHTML = action;
         table.parentElement.appendChild(card);
     })
+    GenerateTooltips();
 }
 
 window. addEventListener('load',() => {

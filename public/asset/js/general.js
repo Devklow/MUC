@@ -28,14 +28,15 @@ $('#DarkModeSwitch').on('change', ()=>{
     }
 })
 
-window. addEventListener('load',() =>{
-    // console.log(sessionStorage.getItem("darkmode"))
-    // console.log(document.cookie)
+function GenerateTooltips() {
     $('[data-toggle="tooltip"]').tooltip({
             container: '.content-wrapper',
         }
     )
+}
 
+window. addEventListener('load',() =>{
+    GenerateTooltips();
     if(getCookie("darkmode") === "true" && document.querySelector("#DarkModeSwitch")){
         enableDarkMode();
         document.querySelector("#DarkModeSwitch").checked = true;
